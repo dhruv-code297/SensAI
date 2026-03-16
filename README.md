@@ -1,36 +1,248 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 SensAI – AI Career Coach
 
-## Getting Started
+SensAI is an **AI-powered Career Coaching platform** built using **Next.js, Prisma, NeonDB, and Google Gemini AI**.
+It helps users **analyze industries, build resumes, generate cover letters, and prepare for interviews using AI.**
 
-First, run the development server:
+The platform provides **personalized career insights** based on the user’s chosen industry and experience level.
+
+---
+
+# 🌟 Features
+
+## 🔐 Authentication
+
+* Secure login and signup using **Clerk**
+* Protected routes
+* User profile management
+
+---
+
+## 🏠 Landing Page
+
+* Modern responsive UI
+* Feature overview
+* Call-to-action for onboarding
+
+---
+
+## 🧭 User Onboarding
+
+Users select:
+
+* Industry
+* Sub-industry
+* Career preferences
+
+Based on this information, **AI generates personalized industry insights.**
+
+---
+
+## 📊 AI Industry Insights
+
+Using **Google Gemini AI**, SensAI generates:
+
+* Industry analysis
+* Trending job roles
+* Key skills required
+* Career growth insights
+
+### 📈 Data Visualization
+
+Insights are visualized using **Recharts**:
+
+* Job trend graphs
+* Skill demand charts
+* Industry growth analytics
+
+### ⏱ Automated Updates
+
+* Industry insights update **every 7 days**
+* Managed using **Inngest cron jobs**
+
+---
+
+## 📄 AI Resume Builder
+
+A fully functional **AI-powered resume builder**.
+
+### Features
+
+* Markdown resume editor
+* Add:
+
+  * Name
+  * Email
+  * Experience
+  * Skills
+  * Education
+  * Projects
+* **AI Improve Button** to enhance resume content
+* Export resume as **PDF**
+
+Libraries used:
+
+* `react-markdown`
+* `html2pdf.js`
+
+---
+
+## ✉️ AI Cover Letter Generator
+
+Generate professional cover letters instantly using **Gemini AI**.
+
+Users provide:
+
+* Job role
+* Company name
+* Experience
+
+AI generates a **personalized cover letter** ready to send.
+
+---
+
+## 🎤 AI Interview Preparation
+
+Helps users prepare for interviews by generating:
+
+* 10 interview questions
+* Detailed explanations
+* Tips for improvement
+
+### 📊 Performance Tracking
+
+Tracks interview preparation performance using graphs.
+
+Users can analyze:
+
+* Strength areas
+* Weak areas
+* Progress over time
+
+---
+
+# 🧱 Tech Stack
+
+### Frontend
+
+* Next.js 16
+* React 19
+* TailwindCSS
+* Radix UI
+* Recharts
+
+### Backend
+
+* Next.js Server Actions
+* Prisma ORM
+* NeonDB (PostgreSQL)
+
+### AI Integration
+
+* Google Gemini AI
+
+### Authentication
+
+* Clerk
+
+### Background Jobs
+
+* Inngest
+
+---
+
+# 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/dhruv-code297/SensAI
+cd sensai
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+---
+
+# ⚙️ Environment Variables
+
+Create a `.env` file in the root:
+
+```
+DATABASE_URL=
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+
+GEMINI_API_KEY=
+```
+
+---
+
+# 🗄 Database Setup
+
+Run Prisma migrations:
+
+```bash
+npx prisma migrate dev
+```
+
+Generate Prisma client:
+
+```bash
+npx prisma generate
+```
+
+---
+
+# ▶️ Run the Project
+
+Start development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open in browser:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+# 📊 Cron Jobs
 
-To learn more about Next.js, take a look at the following resources:
+Industry insights refresh automatically every **7 days** using **Inngest scheduled jobs**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 📱 Responsive Design
 
-## Deploy on Vercel
+The application is fully responsive and optimized for:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Desktop
+* Tablet
+* Mobile
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+# 🔮 Future Improvements
+
+* Job recommendation system
+* ATS resume score checker
+* LinkedIn profile analyzer
+* AI mock interview simulation
+
+---
+
+
+# 👨‍💻 Author
+
+Dhruv 
